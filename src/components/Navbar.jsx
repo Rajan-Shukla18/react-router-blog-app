@@ -1,13 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
-  return (
-    <nav className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
-  );
-};
+const links = [
+  { to: "/", label: "Home", end: true },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+];
+
+const getNavLinkClassName = ({ isActive }) => (isActive ? "nav-link active" : "nav-link");
+
+const Navbar = () => (
+  <nav className="navbar">
+    <div className="navbar-inner">
+      <Link to="/" className="brand">
+        <span className="brand-mark">◆</span>
+        <span className="brand-primary">Field</span>
+        <span className="brand-secondary">Notes</span>
+      </Link>
+      <ul className="nav-links">
+        {links.map((link) => (
+          <li key={link.to}>
+            <NavLink to={link.to} end={link.end} className={getNavLinkClassName}>
+              {link.label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+);
 
 export default Navbar;

@@ -8,6 +8,14 @@ import Contact from "./pages/Contact";
 import PostDetail from "./pages/PostDetail";
 import NotFound from "./pages/NotFound";
 
+const routes = [
+  { path: "/", element: <Home /> },
+  { path: "/about", element: <About /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/post/:id", element: <PostDetail /> },
+  { path: "*", element: <NotFound /> },
+];
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,11 +23,9 @@ function App() {
         <Navbar />
         <main className="app-main">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/post/:id" element={<PostDetail />} />
-            <Route path="*" element={<NotFound />} />
+            {routes.map((route) => (
+              <Route key={route.path} path={route.path} element={route.element} />
+            ))}
           </Routes>
         </main>
         <Footer />

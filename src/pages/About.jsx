@@ -1,11 +1,9 @@
-const About = () => {
-    return (
-        <div className="about-page">
-            <h1>About Us</h1>
-            <p>This is the about page.</p>
-        </div>
-    );
-};
+const About = () => (
+  <div className="about-page">
+    <h1>About</h1>
+    <p>This blog is a simple, focused space for sharing practical notes on frontend work and product thinking.</p>
+  </div>
+);
 
 export default About;
 
