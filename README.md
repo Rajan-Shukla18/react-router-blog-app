@@ -2,10 +2,6 @@
 
 A multi-page blog application built with React and React Router as part of a Front-End Development internship task at CoreGen.
 
-## Live Demo
-
-_(Add your deployed Vercel/Netlify link here once deployed)_
-
 ## About This Project
 
 Fieldnotes is a personal blog covering frontend development, AI-assisted coding, design decisions, and broader topics like space, money, and learning. It was built to demonstrate multi-page routing, dynamic content rendering, and a clean, editorial design system — not to look like a generic tutorial clone.
