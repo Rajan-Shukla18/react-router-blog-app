@@ -25,33 +25,32 @@ Fieldnotes is a personal blog covering frontend development, AI-assisted coding,
 
 ## Project Structure
 
-\`\`\`
+```
 react-router-blog-app-coregen/
 ├── public/
-│ ├── favicon.svg
-│
+│   └── favicon.svg
 ├── src/
-│ ├── assets/
-│ │ └── Rajan.png
-│ ├── components/
-│ │ ├── Navbar.jsx
-│ │ ├── Footer.jsx
-│ │ ├── FeaturedPost.jsx
-│ │ └── PostListItem.jsx
-│ ├── pages/
-│ │ ├── Home.jsx
-│ │ ├── About.jsx
-│ │ ├── Contact.jsx
-│ │ ├── PostDetail.jsx
-│ │ └── NotFound.jsx
-│ ├── data/
-│ │ └── posts.js
-│ ├── utils/
-│ │ └── date.js
-│ ├── App.jsx
-│ ├── App.css
-│ ├── main.jsx
-│ └── index.css
+│   ├── assets/
+│   │   └── Rajan.png
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── FeaturedPost.jsx
+│   │   └── PostListItem.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── PostDetail.jsx
+│   │   └── NotFound.jsx
+│   ├── data/
+│   │   └── posts.js
+│   ├── utils/
+│   │   └── date.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
@@ -59,7 +58,7 @@ react-router-blog-app-coregen/
 ├── package-lock.json
 ├── README.md
 └── vite.config.js
-\`\`\`
+```
 
 ## Status
 
