@@ -10,12 +10,14 @@ Fieldnotes is a personal blog covering frontend development, AI-assisted coding,
 
 - Client-side routing with React Router v7 (`BrowserRouter`, `Routes`, `Route`)
 - Dynamic post detail pages via `useParams()` (`/post/:id`)
+- Programmatic navigation via `useNavigate()` on the Contact form
 - Custom 404 page for unmatched routes and invalid post IDs
-- Featured post + responsive card grid layout on the homepage
+- Featured post + responsive 3-column card grid on the homepage
 - Custom logo and branded navbar with active-route indicator
 - Structured post content — real paragraphs, subheadings, and bullet lists
-- Author info, category tags, and formatted dates on every post
-- Contact form with controlled inputs and submission state
+- Two-column About page with profile photo, stats, and bio
+- Author info, category badges, and formatted dates on every post
+- Contact form with controlled inputs, validation, and post-submit redirect
 - Fully responsive across mobile, tablet, and desktop breakpoints
 - Custom design system: off-white background, forest green accent, Fraunces (serif) + Inter (sans) typography
 
@@ -75,7 +77,7 @@ react-router-blog-app-coregen/
 - [✔] 404 page — handles both invalid routes and invalid post IDs
 - [✔] Footer with social links
 - [✔] Blog post data with real content across 7 posts
-- [ ] About and Contact page content finalized
+- [✔] About and Contact page content finalized
 - [ ] Final responsive QA pass
 - [ ] Deployment
 
@@ -83,6 +85,7 @@ react-router-blog-app-coregen/
 
 \`\`\`bash
 npm install
+\`\`\`
 npm run dev
 \`\`\`
 
