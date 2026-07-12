@@ -10,8 +10,9 @@ Fieldnotes is a personal blog covering frontend development, AI-assisted coding,
 
 - Client-side routing with React Router v7 (`BrowserRouter`, `Routes`, `Route`)
 - Dynamic post detail pages via `useParams()` (`/post/:id`)
-- Custom 404 page for unmatched routes
+- Custom 404 page for unmatched routes and invalid post IDs
 - Featured post + responsive card grid layout on the homepage
+- Custom logo and branded navbar with active-route indicator
 - Author info, category tags, and formatted dates on every post
 - Contact form with controlled inputs and submission state
 - Fully responsive across mobile, tablet, and desktop breakpoints
@@ -31,7 +32,8 @@ react-router-blog-app-coregen/
 │   └── favicon.svg
 ├── src/
 │   ├── assets/
-│   │   └── Rajan.png
+│   │   ├── Rajan.png
+│   │   └── logo.png
 │   ├── components/
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
@@ -66,12 +68,12 @@ react-router-blog-app-coregen/
 - [✔] React Router installed and configured
 - [✔] Route structure: `/`, `/about`, `/contact`, `/post/:id`, and catch-all 404
 - [✔] Global design system — color tokens, typography, spacing
-- [✔] Navbar with active-route indicator
+- [✔] Navbar with logo, active-route indicator, and responsive breakpoints
 - [✔] Home page — featured post + responsive card grid
 - [✔] Dynamic post detail page
+- [✔] 404 page — handles both invalid routes and invalid post IDs
 - [✔] Footer with social links
 - [ ] Blog post data with real content across 7 posts
-- [ ] 404 page
 - [ ] About and Contact page content finalized
 - [ ] Final responsive QA pass
 - [ ] Deployment
@@ -91,4 +93,7 @@ I also learned the importance of maintaining a consistent design system, writing
 
 ## Author
 
-Rajan Shukla — [GitHub](https://github.com/Rajan-Shukla18) · [LinkedIn](https://linkedin.com/in/rajan-shukla-b02467337)
+Rajan Shukla —
+
+[GitHub](https://github.com/Rajan-Shukla18)
+[LinkedIn](https://linkedin.com/in/rajan-shukla-b02467337)

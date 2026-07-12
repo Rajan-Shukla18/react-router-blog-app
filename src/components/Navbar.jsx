@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const links = [
   { to: "/", label: "Home", end: true },
@@ -12,7 +13,7 @@ const Navbar = () => (
   <nav className="navbar">
     <div className="navbar-inner">
       <Link to="/" className="brand">
-        <span className="brand-mark">◆</span>
+        <img src={logo} alt="Fieldnotes logo" className="brand-logo" />
         <span className="brand-primary">Field</span>
         <span className="brand-secondary">Notes</span>
       </Link>
