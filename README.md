@@ -85,7 +85,7 @@ react-router-blog-app-coregen/
 
 \`\`\`bash
 npm install
-\`\`\`
+
 npm run dev
 \`\`\`
 
