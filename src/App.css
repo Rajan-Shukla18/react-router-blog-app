@@ -623,6 +623,84 @@
   color: var(--muted);
 }
 
+/* Post article — editorial detail page layout */
+
+.post-article-content {
+  max-width: 680px;
+}
+
+.post-article-content .post-card-category {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-article-content .back-link {
+  margin-bottom: 0;
+}
+
+.post-article-title {
+  margin: 0.75rem 0 1.5rem;
+  line-height: 1.2;
+}
+
+.post-article-author {
+  margin-bottom: 2rem;
+}
+
+.post-hero-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--surface);
+  margin-bottom: 2.5rem;
+}
+
+.post-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-body p {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.post-body p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 3.2rem;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  margin: 0.1rem 0.5rem 0 0;
+  color: var(--accent);
+
+  .post-subheading {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+}
+
+.post-list-block {
+  margin: 0 0 1.5rem;
+  padding-left: 1.4rem;
+}
+
+.post-list-block li {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+}
+
+
 
 
 
@@ -714,6 +792,45 @@
     font-size: 0.8rem;
   }
 }
+
+
+
+/* Post article — mobile responsive */
+@media (max-width: 640px) {
+
+  .post-hero-image {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-article-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .post-article-author {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+  }
+  .post-body p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  .post-body p:first-of-type::first-letter {
+    font-size: 2.2rem;
+    margin: 0.05rem 0.4rem 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-hero-image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+
+
 
 
 

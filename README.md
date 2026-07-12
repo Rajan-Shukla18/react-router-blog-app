@@ -13,6 +13,7 @@ Fieldnotes is a personal blog covering frontend development, AI-assisted coding,
 - Custom 404 page for unmatched routes and invalid post IDs
 - Featured post + responsive card grid layout on the homepage
 - Custom logo and branded navbar with active-route indicator
+- Structured post content — real paragraphs, subheadings, and bullet lists
 - Author info, category tags, and formatted dates on every post
 - Contact form with controlled inputs and submission state
 - Fully responsive across mobile, tablet, and desktop breakpoints
@@ -73,7 +74,7 @@ react-router-blog-app-coregen/
 - [✔] Dynamic post detail page
 - [✔] 404 page — handles both invalid routes and invalid post IDs
 - [✔] Footer with social links
-- [ ] Blog post data with real content across 7 posts
+- [✔] Blog post data with real content across 7 posts
 - [ ] About and Contact page content finalized
 - [ ] Final responsive QA pass
 - [ ] Deployment
