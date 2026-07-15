@@ -4,16 +4,22 @@ import rajanPhoto from "../assets/Rajan.png";
 const skills = ["React", "JavaScript", "React Router", "HTML & CSS", "Tailwind CSS", "Git", "Node.js", "Supabase"];
 
 const stats = [
+  { label: "Interests", value: "Tech" },
+  { label: "Building", value: "Web Apps" },
   { label: "Based in", value: "Navi Mumbai" },
-  { label: "Project", value: "3+" },
-  { label: "Internship", value: "1" },
+];
+
+const infoItems = [
+  { label: "Email", value: "rajanshukla88503@gmail.com" },
+  { label: "Location", value: "Navi Mumbai, India" },
+  { label: "Studying", value: "B.E. Computer Engineering" },
 ];
 
 const About = () => {
   useEffect(() => { document.title = "About — Fieldnotes"; }, []);
 
   return (
-    <div className="container">
+    <div className="container about-container">
       <header className="page-header">
         <span className="kicker">About</span>
         <h1>Hi, I'm Rajan.</h1>
@@ -21,9 +27,30 @@ const About = () => {
 
       <div className="about-layout">
         <div className="about-profile">
+
           <div className="about-photo">
             <img src={rajanPhoto} alt="Rajan Shukla" />
           </div>
+
+          <h2>Rajan Shukla</h2>
+
+          <div>
+            Frontend Developer
+          </div>
+
+          <div></div>
+
+          <div className="about-info-list">
+            {infoItems.map(({ label, value }) => (
+              <div key={label} className="about-info-item">
+                <span className="about-info-label">{label}</span>
+                <span className="about-info-value">{value}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="profile-divider"></div>
+
           <div className="about-stats">
             {stats.map((s) => (
               <div key={s.label} className="about-stat">
@@ -32,13 +59,14 @@ const About = () => {
               </div>
             ))}
           </div>
+
         </div>
 
-        <div className="about-content">
+        <div className="about-intro">
           <div className="about-lead-box">
             <span className="about-lead-icon">🎓</span>
-            <p className="about-lead">Currently in my 3rd year of B.E. (Computer Engineering) at Datta Meghe College of Engineering.</p>
-       </div>
+            <p className="about-lead">Currently in my 3rd year of B.E. (Computer Engineering) at Datta Meghe College of Engineering, Navi Mumbai.</p>
+          </div>
           <p>I enjoy building things that solve real problems. Over time, project development has taught me that good software is not just about technology — it's about understanding a problem well enough to create a useful solution.</p>
 
           <section className="section">
@@ -60,3 +88,4 @@ const About = () => {
 };
 
 export default About;
+

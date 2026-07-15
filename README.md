@@ -4,7 +4,7 @@ A multi-page blog application built with React and React Router as part of a Fro
 
 ## About This Project
 
-Fieldnotes is a personal blog covering frontend development, AI-assisted coding, design decisions, and broader topics like space, money, and learning. It was built to demonstrate multi-page routing, dynamic content rendering, and a clean, editorial design system — not to look like a generic tutorial clone.
+Fieldnotes is a personal blog covering frontend development,  design decisions, and broader topics like space, money, and learning. It was built to demonstrate multi-page routing, dynamic content rendering, and a clean, editorial design system — not to look like a generic tutorial clone.
 
 ## Features
 
@@ -13,13 +13,12 @@ Fieldnotes is a personal blog covering frontend development, AI-assisted coding,
 - Programmatic navigation via `useNavigate()` on the Contact form
 - Custom 404 page for unmatched routes and invalid post IDs
 - Featured post + responsive 3-column card grid on the homepage
-- Custom logo and branded navbar with active-route indicator
-- Structured post content — real paragraphs, subheadings, and bullet lists
+- Mobile hamburger menu with animated toggle
+- Structured post content — real paragraphs, subheadings, and lists
 - Two-column About page with profile photo, stats, and bio
-- Author info, category badges, and formatted dates on every post
 - Contact form with controlled inputs, validation, and post-submit redirect
 - Fully responsive across mobile, tablet, and desktop breakpoints
-- Custom design system: off-white background, forest green accent, Fraunces (serif) + Inter (sans) typography
+
 
 ## Tech Stack
 
@@ -67,37 +66,32 @@ react-router-blog-app-coregen/
 
 ## Status
 
-- [✔] Project scaffolded with Vite + React
-- [✔] React Router installed and configured
-- [✔] Route structure: `/`, `/about`, `/contact`, `/post/:id`, and catch-all 404
-- [✔] Global design system — color tokens, typography, spacing
-- [✔] Navbar with logo, active-route indicator, and responsive breakpoints
-- [✔] Home page — featured post + responsive card grid
-- [✔] Dynamic post detail page
-- [✔] 404 page — handles both invalid routes and invalid post IDs
-- [✔] Footer with social links
-- [✔] Blog post data with real content across 7 posts
-- [✔] About and Contact page content finalized
+- [x] Routing — Home, About, Contact, dynamic post pages, 404
+- [x] `useParams` and `useNavigate` both implemented
+- [x] Design system — colors, typography, spacing
+- [x] Responsive navbar with mobile menu
+- [x] Home page — featured post + card grid
+- [x] 7 blog posts with real, structured content
+- [x] About and Contact pages complete
 - [ ] Final responsive QA pass
 - [ ] Deployment
 
 ## Setup
 
-\`\`\`bash
+```bash
 npm install
-
 npm run dev
-\`\`\`
+```
 
 ## What I Learned
 
-This project helped me understand client-side routing, dynamic pages with URL parameters, and organizing a React application into reusable components.
+Building this made client-side routing click — the URL is just another piece of state, and everything on screen reacts to it. 
 
-I also learned the importance of maintaining a consistent design system, writing reusable code, and building responsive layouts that work across different screen sizes.
+I also learned how much a consistent design system (shared colors, fonts, spacing) does for making a site feel intentional rather than assembled page by page, and the value of keeping shared logic like date formatting in one place instead of repeating it.
+
 
 ## Author
 
-Rajan Shukla —
+**Rajan Shukla**
 
-[GitHub](https://github.com/Rajan-Shukla18)
-[LinkedIn](https://linkedin.com/in/rajan-shukla-b02467337)
+[GitHub](https://github.com/Rajan-Shukla18) · [LinkedIn](https://linkedin.com/in/rajan-shukla-b02467337)

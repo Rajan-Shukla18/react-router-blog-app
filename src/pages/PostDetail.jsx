@@ -2,9 +2,7 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import posts from "../data/posts";
 import NotFound from "./NotFound";
-
-const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+import { formatDate } from "../utils/date";
 
 const renderBlock = (block, i) => {
   if (block.type === "heading") {
@@ -39,7 +37,7 @@ const PostDetail = () => {
         <img src={post.authorAvatar} alt={post.author} className="author-avatar" />
         <div className="author-info">
           <span className="author-name">{post.author}</span>
-          <span className="author-date">{formatDate(post.date)} · {post.readTime}</span>
+          <span className="author-date">{formatDate(post.date, { month: "long", day: "numeric", year: "numeric" })} · {post.readTime}</span>
         </div>
       </div>
 
