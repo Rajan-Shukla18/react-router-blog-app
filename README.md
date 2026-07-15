@@ -73,7 +73,6 @@ react-router-blog-app-coregen/
 - [x] Home page — featured post + card grid
 - [x] 7 blog posts with real, structured content
 - [x] About and Contact pages complete
-- [ ] Final responsive QA pass
 - [ ] Deployment
 
 ## Setup
