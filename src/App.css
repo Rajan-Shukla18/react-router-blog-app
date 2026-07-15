@@ -996,6 +996,8 @@
   .about-profile {
     width: 100%;
     max-width: none;
+    position: static;
+    top: auto;
   }
 
   .about-photo {
