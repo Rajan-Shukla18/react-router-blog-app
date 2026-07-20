@@ -60,6 +60,30 @@ const About = () => {
             ))}
           </div>
 
+          <div className="about-principles">
+            <h4 className="about-principles-title">Developer Principles</h4>
+
+            <div className="about-principle">
+              <span className="principle-check">✓</span>
+              <span>Build with Purpose</span>
+            </div>
+
+            <div className="about-principle">
+              <span className="principle-check">✓</span>
+              <span>Keep It Simple</span>
+            </div>
+
+            <div className="about-principle">
+              <span className="principle-check">✓</span>
+              <span>Mobile First</span>
+            </div>
+
+            <div className="about-principle">
+              <span className="principle-check">✓</span>
+              <span>Always Learning</span>
+            </div>
+          </div>
+
         </div>
 
         <div className="about-intro">
@@ -67,7 +91,7 @@ const About = () => {
             <span className="about-lead-icon">🎓</span>
             <p className="about-lead">Currently in my 3rd year of B.E. (Computer Engineering) at Datta Meghe College of Engineering, Navi Mumbai.</p>
           </div>
-          <p>I enjoy building things that solve real problems. Over time, project development has taught me that good software is not just about technology — it's about understanding a problem well enough to create a useful solution.</p>
+          <p>WHAT DRIVES ME !! <br /> <br /> I enjoy building things that solve real problems. Over time, project development has taught me that good software is not just about technology — it's about understanding a problem well enough to create a useful solution.</p>
 
           <section className="section">
             <h3 className="section-label">Beyond the code</h3>
@@ -81,6 +105,29 @@ const About = () => {
               {skills.map((s) => <li key={s} className="skill">{s}</li>)}
             </ul>
           </section>
+
+
+          <section className="section">
+            <h3 className="section-label">Currently</h3>
+            <div className="code-card">
+              <div className="code-card-header">
+                <span className="code-dot dot-red"></span>
+                <span className="code-dot dot-yellow"></span>
+                <span className="code-dot dot-green"></span>
+                <span className="code-card-filename">about-me.js</span>
+              </div>
+              <pre className="code-card-body">
+                <span className="code-keyword">const</span> <span className="code-var">rajan</span> = {"{"}
+                {"\n  "}<span className="code-key">mission</span>: <span className="code-string">"Learn. Build. Share."</span>,
+                {"\n  "}<span className="code-key">writingAbout</span>: [<span className="code-string">"Technology"</span>, <span className="code-string">"Development"</span>, <span className="code-string">"Design"</span>],
+                {"\n  "}<span className="code-key">currentlyExploring</span>: <span className="code-string">"Modern Web Development"</span>,
+                {"\n  "}<span className="code-key">mindset</span>: <span className="code-string">"Small improvements every day."</span>,
+                {"\n  "}<span className="code-key">curiosity</span>: <span className="code-boolean">true</span>,
+                {"\n"}{"}"};
+              </pre>
+            </div>
+          </section>
+
         </div>
       </div>
     </div>

@@ -290,29 +290,30 @@
 }
 
 .about-container {
-  max-width: 1100px;
+  max-width: 1160px;
 }
 
 .about-layout {
   display: flex;
-  gap: 3rem;
+  gap: 4.5rem;
   align-items: stretch;
 }
 
 .about-profile {
-  width: 320px;
+  width: 340px;
+  flex-shrink: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 24px;
-  padding: 2rem;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
 }
 
 .about-photo {
-  width: 260px;
-  height: 260px;
-  margin: 0 auto 1.5rem;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 1.75rem;
   border-radius: 24px;
   overflow: hidden;
   background: #f3f0ea;
@@ -328,13 +329,17 @@
 }
 
 .about-info-list {
-  margin-top: 2rem;
-  padding-top: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }
 
 .about-info-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.15rem;
+}
+
+.about-info-item:last-child {
+  margin-bottom: 0;
 }
 
 .about-info-label {
@@ -362,12 +367,12 @@
 .about-lead-box {
   display: flex;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: 1rem;
   background: var(--surface);
   border: 0.5px solid var(--border);
-  border-radius: 10px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.25rem;
 }
 
 .about-lead-icon {
@@ -388,9 +393,9 @@
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border);
   text-align: center;
 }
@@ -414,6 +419,134 @@
   margin-top: 0.25rem;
 }
 
+.code-card {
+  background: #f8f6f1;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.code-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.9rem 1.2rem;
+  background: #ece7dd;
+  border-bottom: 1px solid var(--border);
+}
+
+.code-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background: #d27d6c;
+}
+
+.dot-yellow {
+  background: #c9a74d;
+}
+
+.dot-green {
+  background: var(--accent);
+}
+
+.code-card-filename {
+  margin-left: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-family: monospace;
+}
+
+.code-card-body {
+  padding: 1.75rem;
+  margin: 0;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 2;
+  color: #232323;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Developer Principles */
+
+.about-principles {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.about-principles-title {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.about-principle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+}
+
+.about-principle:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.principle-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(47, 111, 95, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.about-principle span:last-child {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Syntax Colors */
+
+.code-keyword {
+  color: #7b4f8c;
+  font-weight: 700;
+}
+
+.code-var {
+  color: #1f5b46;
+  font-weight: 700;
+}
+
+.code-key {
+  color: #355f7a;
+}
+
+.code-string {
+  color: #8a5d3b;
+}
+
+.code-boolean {
+  color: #2e7d57;
+  font-weight: 700;
+}
+
 /* Forms and support blocks */
 
 .contact-form {
@@ -432,7 +565,7 @@
 .field label {
   font-size: 0.8125rem;
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .field input,
@@ -464,7 +597,7 @@
   padding: 0.7rem 1.4rem;
   border-radius: 6px;
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -955,6 +1088,7 @@
   .nav-link {
     font-size: 1rem;
   }
+
 }
 
 @media (max-width: 640px) {
@@ -1015,6 +1149,28 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
+
+  .code-card-body {
+    padding: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .about-focus {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .focus-item {
+    padding: 0.85rem;
+    font-size: 0.85rem;
+  }
+
 }
 
 
