@@ -1,69 +1,5 @@
 /* App-wide layout and shared UI styles */
 
-/* Base layout */
-
-.container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.container-wide {
-  width: 100%;
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-
-/* Home page intro and topic tags */
-
-.page-header {
-  margin-bottom: 2rem;
-}
-
-.topic-tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 1.25rem 0 0;
-}
-
-.topic-tags li {
-  font-family: var(--serif);
-  font-size: 0.94rem;
-  font-weight: 600;
-  color: var(--accent);
-  border: none;
-  border-radius: 7px;
-  padding: 0.35rem 0.85rem;
-  background: rgba(31, 94, 61, 0.08);
-  transition: background-color 0.15s ease;
-  cursor: default;
-}
-
-.topic-tag-more {
-  background: transparent !important;
-  color: var(--muted) !important;
-  font-style: italic;
-}
-
-.page-header .kicker {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.page-header p {
-  max-width: 46ch;
-  font-size: 1.0625rem;
-  color: var(--muted);
-}
 
 /* Blog post list and article layout */
 
@@ -507,179 +443,6 @@
   text-decoration: none;
 }
 
-/* Featured post and content cards */
-.featured-post {
-  display: flex;
-  gap: 2rem;
-  align-items: stretch;
-  text-decoration: none;
-  color: var(--text);
-  margin-bottom: 2rem;
-  padding-bottom: 3rem;
-  border-bottom: 0.5px solid var(--border);
-}
-
-.featured-post:hover {
-  text-decoration: none;
-}
-
-.featured-post:hover .featured-post-title {
-  color: var(--accent);
-}
-
-.featured-post-image {
-  flex: 0 0 45%;
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 9 / 6;
-}
-
-.featured-post-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.featured-post-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.featured-post-title {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.25;
-  margin: 0.5rem 0 0.75rem;
-  transition: color 0.15s ease;
-}
-
-.featured-post-excerpt {
-  color: var(--muted);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.post-card-category {
-  font-size: 0.8rem;
-  color: #2563eb;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
-.post-grid {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-}
-
-.post-card a {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.post-card:hover .post-card-title {
-  color: var(--accent);
-}
-
-.post-card-image {
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 9 / 6;
-  margin-bottom: 1rem;
-}
-
-.post-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.25s ease;
-}
-
-.post-card:hover .post-card-image img {
-  transform: scale(1.03);
-}
-
-.post-card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.post-card-title {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1.35;
-  margin: 0.35rem 0 0.5rem;
-  transition: color 0.15s ease;
-}
-
-.post-card-excerpt {
-  color: var(--muted);
-  font-size: 0.875rem;
-  margin: 0 0 0.75rem;
-}
-
-.post-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.post-card-meta .dot {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background-color: var(--muted);
-  display: inline-block;
-}
-
-.author-row {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 1rem;
-  padding-top: 0.75rem;
-}
-
-.author-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.author-info {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.3;
-}
-
-.author-name {
-  font-size: 0.825rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.author-date {
-  font-size: 0.75rem;
-  color: var(--muted);
-}
 
 /* Post article — editorial detail page layout */
 
@@ -756,9 +519,7 @@
 
 
 @media (max-width: 800px) {
-  .post-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+ 
 
   .featured-post {
     flex-direction: column;
@@ -769,12 +530,6 @@
   }
 }
 
-
-@media (max-width: 560px) {
-  .post-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 @media (max-width: 480px) {
   .post-hero-image {

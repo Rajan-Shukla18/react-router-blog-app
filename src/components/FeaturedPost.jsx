@@ -2,19 +2,27 @@ import { Link } from "react-router-dom";
 import { formatDate } from "../utils/date";
 
 const FeaturedPost = ({ post }) => (
-  <Link to={`/post/${post.id}`} className="featured-post">
-    <div className="featured-post-image">
-      <img src={post.image} alt={post.title} loading="lazy" />
+  <Link to={`/post/${post.id}`} className="mb-8 flex flex-col gap-8 border-b border-border pb-12 text-text no-underline md:flex-row">
+    <div className="overflow-hidden rounded-2xl md:basis-[45%]">
+      <img src={post.image} alt={post.title} loading="lazy" className="aspect-[9/6] h-full w-full object-cover"/>
     </div>
-    <div className="featured-post-body">
-      <span className="post-card-category">{post.category}</span>
-      <h2 className="featured-post-title">{post.title}</h2>
-      <p className="featured-post-excerpt">{post.excerpt}</p>
-      <div className="author-row">
-        <img src={post.authorAvatar} alt={post.author} className="author-avatar" />
-        <div className="author-info">
-          <span className="author-name">{post.author}</span>
-          <span className="author-date">{formatDate(post.date)}</span>
+    <div className="flex flex-1 flex-col">
+      <span className="text-xs font-bold uppercase tracking-[0.06em] text-blue-600">
+        {post.category}
+      </span>
+      <h2 className="my-2 font-serif text-xl font-semibold leading-tight transition-colors duration-200 hover:text-accent">
+        {post.title}
+      </h2>
+      <p className="mb-4 text-base text-muted">{post.excerpt}</p>
+      <div className="mt-4 flex items-center gap-3 pt-3">
+        <img src={post.authorAvatar} alt={post.author} className="h-8 w-8 rounded-full object-cover"/>
+        <div className="flex flex-col leading-5">
+          <span className="text-sm font-medium text-text">
+            {post.author}
+          </span>
+          <span className="text-xs text-muted">
+            {formatDate(post.date)}
+          </span>
         </div>
       </div>
     </div>

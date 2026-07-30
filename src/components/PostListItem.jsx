@@ -2,20 +2,30 @@ import { Link } from "react-router-dom";
 import { formatDate } from "../utils/date";
 
 const PostListItem = ({ post }) => (
-  <li className="post-card">
-    <Link to={`/post/${post.id}`}>
-      <div className="post-card-image">
-        <img src={post.image} alt={post.title} loading="lazy" />
+  <li className="group">
+    <Link to={`/post/${post.id}`} className="flex h-full flex-col text-text no-underline">
+      <div className="mb-4 overflow-hidden rounded-2xl">
+        <img src={post.image} alt={post.title} loading="lazy" className="aspect-[9/6] h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"/>
       </div>
-      <div className="post-card-body">
-        <span className="post-card-category">{post.category}</span>
-        <h2 className="post-card-title">{post.title}</h2>
-        <p className="post-card-excerpt">{post.excerpt}</p>
-        <div className="author-row">
-          <img src={post.authorAvatar} alt={post.author} className="author-avatar" />
-          <div className="author-info">
-            <span className="author-name">{post.author}</span>
-            <span className="author-date">{formatDate(post.date)}</span>
+      <div className="flex flex-1 flex-col">
+        <span className="text-xs font-bold uppercase tracking-[0.06em] text-blue-600">
+          {post.category}
+        </span>
+        <h2 className="mt-2 mb-2 font-serif text-xl font-medium leading-snug transition-colors duration-200 group-hover:text-accent">
+          {post.title}
+        </h2>
+        <p className="mb-4 text-sm leading-6 text-muted">
+          {post.excerpt}
+        </p>
+        <div className="mt-4 flex items-center gap-3 pt-3">
+          <img src={post.authorAvatar} alt={post.author} className="h-8 w-8 rounded-full object-cover"/>
+          <div className="flex flex-col leading-5">
+            <span className="text-sm font-medium text-text">
+              {post.author}
+            </span>
+            <span className="text-xs text-muted">
+              {formatDate(post.date)}
+            </span>
           </div>
         </div>
       </div>
