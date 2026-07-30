@@ -1,19 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+
   content: [
     "./index.html",
     "./src/**/*.{js,jsx}",
   ],
+
   theme: {
     extend: {
       colors: {
-        bg: "#fafaf9",
-        surface: "#ffffff",
-        border: "#e5e4df",
-        text: "#1a1a18",
-        muted: "#6b6b66",
-        accent: "#1f5e3d",
-        "accent-hover": "#174a30",
+        // ---------- Light Theme ----------
+        bg: "#FAF8F5",
+        surface: "#FFFFFF",
+        border: "#E5E0D8",
+        text: "#1A1A18",
+        muted: "#6B6B66",
+        accent: "#1F5E3D",
+        "accent-hover": "#174A30",    
       },
 
       fontFamily: {
@@ -27,5 +30,6 @@ export default {
       },
     },
   },
+
   plugins: [],
 };

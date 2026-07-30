@@ -19,14 +19,11 @@ const About = () => {
   useEffect(() => { document.title = "About — Fieldnotes"; }, []);
 
   return (
-    <div className="mx-auto max-w-[1160px] px-6 py-10">
-      <header className="mb-12">
-        <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-[0.08em] text-accent">
-          About
-        </span>
-        <h1 className="font-serif text-5xl font-medium leading-tight text-text">
-          Hi, I'm Rajan.
-        </h1>
+    <div className="mx-auto max-w-[1160px] px-2 pt-4 pb-6">
+      <header className="mb-6">
+      <span className="mb-2 inline-block text-base font-bold uppercase tracking-[0.09em] text-accent">
+        About
+      </span>
       </header>  
 
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-18">
@@ -139,8 +136,15 @@ const About = () => {
             <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-text">
               Tools I reach for
             </h3>
-            <ul className="flex flex-wrap gap-2">
-              {skills.map((s) => <li key={s} className="rounded-full border border-border bg-surface px-3 py-1.5 text-sm"> {s} </li>)}
+            <ul className="flex flex-wrap gap-3">
+              {skills.map((s) => (
+                <li
+                  key={s}
+                  className="rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent ring-1 ring-accent/20 transition-all duration-200 hover:bg-accent hover:text-white"
+                >
+                  {s}
+                </li>
+              ))}
             </ul>
           </section>
 

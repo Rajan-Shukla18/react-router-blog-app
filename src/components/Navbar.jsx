@@ -8,7 +8,6 @@ const links = [
   { to: "/contact", label: "Contact" },
 ];
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,18 +15,32 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="sticky top-0 z-10 border-b border-border bg-bg">
+    <nav className="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-nav items-center justify-between px-6 py-5">
-      <Link
-        to="/"
-        onClick={closeMenu}
-        className="flex items-center gap-2 font-serif text-lg font-bold uppercase no-underline"
-      >
-          <img src={logo} alt="Fieldnotes logo" className="h-8 w-8 object-contain" />
-          <span className="text-lg font-semibold uppercase text-green-700">Field</span>
-          <span className="text-lg font-semibold uppercase text-gray-900">Notes</span>
+
+        {/* Logo */}
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="flex items-center gap-2 no-underline"
+        >
+          <img
+            src={logo}
+            alt="Fieldnotes logo"
+            className="h-8 w-8 object-contain"
+          />
+
+          <span className="font-serif text-lg font-semibold uppercase text-accent">
+            Field
+          </span>
+
+          <span className="font-serif text-lg font-semibold uppercase text-text">
+            Notes
+          </span>
         </Link>
-        <ul className="hidden md:flex items-center gap-7">
+
+        {/* Desktop Navigation */}
+        <ul className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink to={link.to} end={link.end}>
@@ -35,12 +48,12 @@ const Navbar = () => {
                   <span
                     className={`relative text-[15px] transition-colors duration-200 ${
                       isActive
-                        ? "font-semibold text-gray-900"
-                        : "text-stone-500 hover:text-gray-900"
+                        ? "font-semibold text-text"
+                        : "text-muted hover:text-text"
                     }`}
                   >
                     {isActive && (
-                      <span className="absolute -left-3 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-green-700"></span>
+                      <span className="absolute -left-3 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent"></span>
                     )}
 
                     {link.label}
@@ -50,31 +63,35 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-       <button
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-            className="flex h-5 w-6 flex-col justify-between md:hidden"
-          >
-            <span
-              className={`h-0.5 w-full rounded bg-gray-900 transition-all duration-300 ${
-                isOpen ? "translate-y-2 rotate-45" : ""
-              }`}
-            ></span>
 
-            <span
-              className={`h-0.5 w-full rounded bg-gray-900 transition-all duration-300 ${
-                isOpen ? "opacity-0" : ""
-              }`}
-            ></span>
+        {/* Mobile Hamburger */}
+        <button
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+          className="flex h-5 w-6 flex-col justify-between md:hidden"
+        >
+          <span
+            className={`h-0.5 w-full rounded bg-text transition-all duration-300 ${
+              isOpen ? "translate-y-2 rotate-45" : ""
+            }`}
+          />
 
-            <span
-              className={`h-0.5 w-full rounded bg-gray-900 transition-all duration-300 ${
-                isOpen ? "-translate-y-2 -rotate-45" : ""
-              }`}
-            ></span>
+          <span
+            className={`h-0.5 w-full rounded bg-text transition-all duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          />
+
+          <span
+            className={`h-0.5 w-full rounded bg-text transition-all duration-300 ${
+              isOpen ? "-translate-y-2 -rotate-45" : ""
+            }`}
+          />
         </button>
+
       </div>
 
+      {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 md:hidden ${
           isOpen
@@ -85,7 +102,7 @@ const Navbar = () => {
         <ul className="flex flex-col gap-5 px-6 py-6">
           {links.map((link) => (
             <li key={link.to}>
-             <NavLink
+              <NavLink
                 to={link.to}
                 end={link.end}
                 onClick={closeMenu}
@@ -94,13 +111,14 @@ const Navbar = () => {
                   <span
                     className={`relative text-base transition-colors duration-200 ${
                       isActive
-                        ? "font-semibold text-gray-900"
-                        : "text-stone-500 hover:text-gray-900"
+                        ? "font-semibold text-text"
+                        : "text-muted hover:text-text"
                     }`}
                   >
                     {isActive && (
-                      <span className="absolute -left-3 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-green-700"></span>
+                      <span className="absolute -left-3 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent"></span>
                     )}
+
                     {link.label}
                   </span>
                 )}
@@ -114,4 +132,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

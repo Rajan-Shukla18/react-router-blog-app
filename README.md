@@ -1,97 +1,111 @@
-# Fieldnotes — React Router Blog App
+# Fieldnotes – React Router Blog
 
-A multi-page blog application built with React and React Router as part of a Front-End Development internship task at CoreGen.
+A modern, responsive multi-page blog application built with **React**, **React Router**, **Tailwind CSS**, and **Vite**.
 
-## About This Project
+## Overview
 
-Fieldnotes is a personal blog covering frontend development,  design decisions, and broader topics like space, money, and learning. It was built to demonstrate multi-page routing, dynamic content rendering, and a clean, editorial design system — not to look like a generic tutorial clone.
+Fieldnotes is a personal blog project that focuses on frontend development, technology, learning, and design. The project demonstrates client-side routing, reusable React components, dynamic blog pages, and a clean editorial-inspired UI.
 
 ## Features
 
-- Client-side routing with React Router v7 (`BrowserRouter`, `Routes`, `Route`)
-- Dynamic post detail pages via `useParams()` (`/post/:id`)
-- Programmatic navigation via `useNavigate()` on the Contact form
-- Custom 404 page for unmatched routes and invalid post IDs
-- Featured post + responsive 3-column card grid on the homepage
-- Mobile hamburger menu with animated toggle
-- Structured post content — real paragraphs, subheadings, and lists
-- Two-column About page with profile photo, stats, and bio
-- Contact form with controlled inputs, validation, and post-submit redirect
-- Fully responsive across mobile, tablet, and desktop breakpoints
-
+- Multi-page routing with React Router
+- Dynamic blog post pages using URL parameters
+- Responsive design for mobile, tablet, and desktop
+- Featured post section and blog grid
+- About page with profile, skills, and developer principles
+- Contact page with controlled form validation
+- Custom 404 page
+- Reusable components
+- Tailwind CSS design system
+- Clean and minimal UI
 
 ## Tech Stack
 
-- React (Vite)
-- React Router DOM v7
-- Plain CSS with custom design tokens (no UI framework)
+- React
+- React Router DOM
+- Tailwind CSS
+- Vite
+- JavaScript (ES6+)
 
 ## Project Structure
 
-```
-react-router-blog-app-coregen/
+```text
+fieldnotes/
+│
 ├── public/
-│   └── favicon.svg
+│
 ├── src/
 │   ├── assets/
-│   │   ├── Rajan.png
-│   │   └── logo.png
 │   ├── components/
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
 │   │   ├── FeaturedPost.jsx
 │   │   └── PostListItem.jsx
+│   │
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
 │   │   ├── PostDetail.jsx
 │   │   └── NotFound.jsx
+│   │
 │   ├── data/
 │   │   └── posts.js
+│   │
 │   ├── utils/
 │   │   └── date.js
+│   │
 │   ├── App.jsx
-│   ├── App.css
 │   ├── main.jsx
 │   └── index.css
-├── .gitignore
-├── eslint.config.js
+│
 ├── index.html
 ├── package.json
-├── package-lock.json
-├── vercel.json
-├── README.md
-└── vite.config.js
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
 ```
 
-## Status
+## Installation
 
-- [x] Routing — Home, About, Contact, dynamic post pages, 404
-- [x] `useParams` and `useNavigate` both implemented
-- [x] Design system — colors, typography, spacing
-- [x] Responsive navbar with mobile menu
-- [x] Home page — featured post + card grid
-- [x] 7 blog posts with real, structured content
-- [x] About and Contact pages complete
-- [x] Deployment
+Clone the repository
 
-## Setup
+```bash
+git clone https://github.com/Rajan-Shukla18/react-router-blog-app-coregen.git
+```
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Start the development server
+
+```bash
 npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
 ```
 
 ## What I Learned
 
-Building this made client-side routing click — the URL is just another piece of state, and everything on screen reacts to it. 
+During this project I learned:
 
-I also learned how much a consistent design system (shared colors, fonts, spacing) does for making a site feel intentional rather than assembled page by page, and the value of keeping shared logic like date formatting in one place instead of repeating it.
-
+- React Router and dynamic routing
+- Building reusable React components
+- Responsive layouts with Tailwind CSS
+- Managing application structure
+- Creating a consistent UI design system
+- Working with props, state, and hooks
 
 ## Author
 
 **Rajan Shukla**
 
-[GitHub](https://github.com/Rajan-Shukla18) · [LinkedIn](https://linkedin.com/in/rajan-shukla-b02467337)
+- GitHub: https://github.com/Rajan-Shukla18
+- LinkedIn: https://linkedin.com/in/rajan-shukla-b02467337
