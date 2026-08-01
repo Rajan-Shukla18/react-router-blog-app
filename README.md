@@ -1,23 +1,31 @@
-# Fieldnotes – React Router Blog
+# Fieldnotes
 
 A modern, responsive multi-page blog application built with **React**, **React Router**, **Tailwind CSS**, and **Vite**.
 
-## Overview
+---
 
-Fieldnotes is a personal blog project that focuses on frontend development, technology, learning, and design. The project demonstrates client-side routing, reusable React components, dynamic blog pages, and a clean editorial-inspired UI.
+## About
+
+Fieldnotes is a personal blog project focused on technology, frontend development, design, and continuous learning.
+
+The application demonstrates client-side routing, reusable React components, dynamic blog pages, and a clean editorial-inspired user interface while following modern frontend development practices.
+
+---
 
 ## Features
 
-- Multi-page routing with React Router
-- Dynamic blog post pages using URL parameters
-- Responsive design for mobile, tablet, and desktop
-- Featured post section and blog grid
-- About page with profile, skills, and developer principles
-- Contact page with controlled form validation
-- Custom 404 page
-- Reusable components
-- Tailwind CSS design system
-- Clean and minimal UI
+- Multi-page routing using React Router
+- Dynamic blog post pages with URL parameters
+- Responsive layout for mobile, tablet, and desktop
+- Featured post section and blog listing
+- Detailed About page with profile and skills
+- Contact form with validation
+- Custom 404 Not Found page
+- Reusable and modular React components
+- Clean editorial-inspired UI
+- Built with Tailwind CSS
+
+---
 
 ## Tech Stack
 
@@ -27,7 +35,9 @@ Fieldnotes is a personal blog project that focuses on frontend development, tech
 - Vite
 - JavaScript (ES6+)
 
-## Project Structure
+---
+
+## Folder Structure
 
 ```text
 fieldnotes/
@@ -37,10 +47,13 @@ fieldnotes/
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
 │   │   ├── FeaturedPost.jsx
 │   │   └── PostListItem.jsx
+│   │
+│   ├── data/
+│   │   └── posts.js
 │   │
 │   ├── pages/
 │   │   ├── Home.jsx
@@ -49,22 +62,21 @@ fieldnotes/
 │   │   ├── PostDetail.jsx
 │   │   └── NotFound.jsx
 │   │
-│   ├── data/
-│   │   └── posts.js
-│   │
 │   ├── utils/
 │   │   └── date.js
 │   │
 │   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
+│   ├── index.css
+│   └── main.jsx
 │
 ├── index.html
 ├── package.json
-├── vite.config.js
 ├── tailwind.config.js
+├── vite.config.js
 └── README.md
 ```
+
+---
 
 ## Installation
 
@@ -72,6 +84,12 @@ Clone the repository
 
 ```bash
 git clone https://github.com/Rajan-Shukla18/react-router-blog-app-coregen.git
+```
+
+Move into the project folder
+
+```bash
+cd react-router-blog-app-coregen
 ```
 
 Install dependencies
@@ -86,22 +104,44 @@ Start the development server
 npm run dev
 ```
 
-Build for production
+Create a production build
 
 ```bash
 npm run build
 ```
 
-## What I Learned
+Preview the production build
 
-During this project I learned:
+```bash
+npm run preview
+```
 
-- React Router and dynamic routing
-- Building reusable React components
-- Responsive layouts with Tailwind CSS
-- Managing application structure
-- Creating a consistent UI design system
-- Working with props, state, and hooks
+---
+
+## Learning Outcomes
+
+Through this project, I gained practical experience with:
+
+- React Router and client-side routing
+- Dynamic routing using URL parameters
+- Reusable React components
+- Component-based project architecture
+- Responsive UI development with Tailwind CSS
+- State management using React Hooks
+- Building clean and maintainable frontend applications
+
+---
+
+## Future Improvements
+
+- Search functionality
+- Blog categories and tags
+- Dark mode
+- Markdown support
+- Backend integration
+- Content Management System (CMS)
+
+---
 
 ## Author
 
@@ -109,3 +149,9 @@ During this project I learned:
 
 - GitHub: https://github.com/Rajan-Shukla18
 - LinkedIn: https://linkedin.com/in/rajan-shukla-b02467337
+
+---
+
+## Acknowledgement
+
+This project was developed as part of the Front-End Development Internship Program at **CoreGen**. It was created for learning, evaluation, and portfolio purposes.

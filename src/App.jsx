@@ -23,7 +23,7 @@ function App() {
       <div className="flex min-h-screen flex-col bg-bg text-text">
         <Navbar />
 
-        <main className="flex-1 px-2 py-4 md:px-8 md:py-10">
+        <main className="flex-1">
           <Routes>
             {routes.map((route) => (
               <Route

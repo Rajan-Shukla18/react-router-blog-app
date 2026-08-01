@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import rajanPhoto from "../assets/Rajan.png";
 
-const skills = ["React", "JavaScript", "React Router", "HTML & CSS", "Tailwind CSS", "Git", "Node.js", "Supabase"];
+const skills = ["React", "JavaScript", "React Router", "HTML & CSS", "Tailwind CSS", "Git", "Node.js", "Supabase", "Vercel"];
 
 const stats = [
   { label: "Interests", value: "Tech" },
@@ -19,7 +19,8 @@ const About = () => {
   useEffect(() => { document.title = "About — Fieldnotes"; }, []);
 
   return (
-    <div className="mx-auto max-w-[1160px] px-2 pt-4 pb-6">
+    <div className="min-h-screen -mx-2 md:-mx-8 -mt-4 md:-mt-10 px-2 md:px-8 pt-4 md:pt-10 bg-gradient-to-br from-[#F5FAFF] via-[#EBF3FC] to-[#E3EFFB]">
+      <div className="mx-auto max-w-[1160px] px-6 py-10">
       <header className="mb-6">
       <span className="mb-2 inline-block text-base font-bold uppercase tracking-[0.09em] text-accent">
         About
@@ -27,23 +28,23 @@ const About = () => {
       </header>  
 
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-18">
-        <div className="w-full rounded-3xl border border-border bg-surface p-9 lg:w-[340px] lg:flex-shrink-0">
+        <div className="w-full rounded-3xl border border-[#D9E7F5] bg-[#EBF3FC] p-9 shadow-[0_8px_30px_rgba(91,140,190,0.08)] lg:w-[340px] lg:flex-shrink-0">
 
-          <div className="mx-auto mb-7 aspect-square w-[250px] overflow-hidden rounded-3xl bg-[#f3f0ea] p-2">
+          <div className="mx-auto mb-7 aspect-square w-[250px] overflow-hidden rounded-3xl bg-[#EBF3FC] p-2">
             <img src={rajanPhoto} alt="Rajan Shukla" className="h-full w-full rounded-2xl object-cover" />
           </div>
 
-          <h2 className="font-serif text-3xl font-semibold text-text">
+          <h1 className="font-serif text-3xl font-semibold text-text">
             Rajan Shukla
-          </h2>
+          </h1>
 
           <div className="mt-2 text-base text-muted">
             Frontend Developer
           </div>
 
-         <div className="my-6 h-px bg-border"></div>
+         <div className="my-6 h-px bg-[#D9E7F5]"></div>
 
-          <div className="space-y-5">
+          <div className="space-y-5 rounded-2xl bg-gradient-to-br from-[#F8FBFF] to-[#EBF3FC] border border-[#D9E7F5] p-4">
             {infoItems.map(({ label, value }) => (
               <div key={label} className="space-y-1">
                 <span className="block text-[0.7rem] font-medium uppercase tracking-[0.1em] text-muted">
@@ -56,9 +57,9 @@ const About = () => {
             ))}
           </div>
 
-          <div className="my-6 h-px bg-border"></div>
+          <div className="my-6 h-px bg-[#D9E7F5]"></div>
 
-          <div className="mt-6 grid grid-cols-3 gap-2 border-t border-border pt-6 text-center">
+          <div className="mt-6 grid grid-cols-3 gap-2 rounded-2xl bg-gradient-to-br from-[#F8FBFF] to-[#EBF3FC] border border-[#D9E7F5] pt-6 pb-5 px-2 text-center">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col">
                 <span className="font-serif text-base font-semibold text-accent">
@@ -71,12 +72,12 @@ const About = () => {
             ))}
           </div>
 
-          <div className="mt-8 border-t border-border pt-7">
+          <div className="mt-8 rounded-2xl bg-gradient-to-br from-[#F8FBFF] to-[#EBF3FC] border border-[#D9E7F5] p-5">
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.1em] text-muted">
               Developer Principles
             </h4>
 
-            <div className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
+            <div className="flex items-center gap-3 py-3 border-b border-[#D9E7F5] last:border-b-0">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                 ✓
               </span>
@@ -85,14 +86,14 @@ const About = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
+            <div className="flex items-center gap-3 py-3 border-b border-[#D9E7F5] last:border-b-0">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                 ✓
               </span>
               <span className="text-[0.92rem] font-medium text-text">Keep It Simple</span>
             </div>
 
-            <div className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
+            <div className="flex items-center gap-3 py-3 border-b border-[#D9E7F5] last:border-b-0">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                 ✓
               </span>
@@ -101,7 +102,7 @@ const About = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
+            <div className="flex items-center gap-3 py-3 border-b border-[#D9E7F5] last:border-b-0">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                ✓
               </span>
@@ -113,8 +114,9 @@ const About = () => {
 
         </div>
 
+
         <div className="flex-1 min-w-0">
-          <div className="mb-9 flex items-start gap-4 rounded-xl border border-border bg-surface px-7 py-6">
+          <div className="mb-9 flex items-start gap-4 rounded-xl border border-[#D9E7F5] bg-gradient-to-r from-[#FFFFFF] to-[#EFF6FD] px-7 py-6 shadow-sm">
             <span className="shrink-0 text-xl leading-6">
               🎓
             </span>
@@ -153,43 +155,44 @@ const About = () => {
             <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-text">
               Currently
             </h3>
-            <div className="mt-4 overflow-hidden rounded-3xl border border-border bg-[#f8f6f1] shadow-lg">
-              <div className="flex items-center gap-2 border-b border-border bg-[#ece7dd] px-5 py-4">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#d27d6c]"></span>
-                <span className="h-2.5 w-2.5 rounded-full bg-[#c9a74d]"></span>
-                <span className="h-2.5 w-2.5 rounded-full bg-accent"></span>
-                <span className="ml-3 font-mono text-sm text-muted">
-                  about-me.js
-                </span>
-              </div>
-              <pre className="overflow-x-auto whitespace-pre px-7 py-7 font-mono text-base font-semibold leading-8 text-[#232323]">
-                <span className="font-bold text-[#7b4f8c]">const</span>{" "}
-                <span className="font-bold text-[#1f5b46]">rajan</span> = {"{"}
-                {"\n  "}
-                <span className="text-[#355f7a]">mission</span>:{" "}
-                <span className="text-[#8a5d3b]">"Learn. Build. Share."</span>,
-                {"\n  "}
-                <span className="text-[#355f7a]">writingAbout</span>: [
-                <span className="text-[#8a5d3b]">"Technology"</span>,{" "}
-                <span className="text-[#8a5d3b]">"Development"</span>,{" "}
-                <span className="text-[#8a5d3b]">"Design"</span>],
-                {"\n  "}
-                <span className="text-[#355f7a]">currentlyExploring</span>:{" "}
-                <span className="text-[#8a5d3b]">"Modern Web Development"</span>,
-                {"\n  "}
-                <span className="text-[#355f7a]">mindset</span>:{" "}
-                <span className="text-[#8a5d3b]">"Small improvements every day."</span>,
-                {"\n  "}
-                <span className="text-[#355f7a]">curiosity</span>:{" "}
-                <span className="font-bold text-[#2e7d57]">true</span>,
-                {"\n"}
-                {"}"};
-              </pre>
-            </div>
+<div className="mt-4 overflow-hidden rounded-3xl border border-[#D9E7F5] bg-[#EBF3FC] shadow-lg">
+  <div className="flex items-center gap-2 border-b border-[#D9E7F5] bg-[#DCEAFA] px-5 py-4">
+    <span className="h-2.5 w-2.5 rounded-full bg-[#d27d6c]"></span>
+    <span className="h-2.5 w-2.5 rounded-full bg-[#c9a74d]"></span>
+    <span className="h-2.5 w-2.5 rounded-full bg-accent"></span>
+    <span className="ml-3 font-mono text-sm text-muted">
+      about-me.js
+    </span>
+  </div>
+      <pre className="overflow-x-auto whitespace-pre px-7 py-7 font-mono text-base font-semibold leading-8 text-[#232323] bg-[#EBF3FC]">
+        <span className="font-bold text-[#7b4f8c]">const</span>{" "}
+        <span className="font-bold text-[#1f5b46]">rajan</span> = {"{"}
+        {"\n  "}
+        <span className="text-[#355f7a]">mission</span>:{" "}
+        <span className="text-[#8a5d3b]">"Learn. Build. Share."</span>,
+        {"\n  "}
+        <span className="text-[#355f7a]">writingAbout</span>: [
+        <span className="text-[#8a5d3b]">"Technology"</span>,{" "}
+        <span className="text-[#8a5d3b]">"Development"</span>,{" "}
+        <span className="text-[#8a5d3b]">"Design"</span>],
+        {"\n  "}
+        <span className="text-[#355f7a]">currentlyExploring</span>:{" "}
+        <span className="text-[#8a5d3b]">"Modern Web Development"</span>,
+        {"\n  "}
+        <span className="text-[#355f7a]">mindset</span>:{" "}
+        <span className="text-[#8a5d3b]">"Small improvements every day."</span>,
+        {"\n  "}
+        <span className="text-[#355f7a]">curiosity</span>:{" "}
+        <span className="font-bold text-[#2e7d57]">true</span>,
+        {"\n"}
+        {"}"};
+      </pre>
+    </div>
           </section>
 
         </div>
       </div>
+    </div>
     </div>
   );
 };
