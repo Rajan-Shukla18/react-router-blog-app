@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,16 +24,8 @@ function App() {
       <div className="flex min-h-screen flex-col bg-bg text-text">
         <Navbar />
 
-        <main className="flex-1">
-          <Routes>
-            {routes.map((route) => (
-              <Route
-                key={route.path}
-                path={route.path}
-                element={route.element}
-              />
-            ))}
-          </Routes>
+        <main className="flex-1 px-2 py-4 md:px-8 md:py-10">
+         <AnimatedRoutes routes={routes} />
         </main>
 
         <Footer />
