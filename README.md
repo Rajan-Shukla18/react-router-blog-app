@@ -17,13 +17,17 @@ The application demonstrates client-side routing, reusable React components, dyn
 - Multi-page routing using React Router
 - Dynamic blog post pages with URL parameters
 - Responsive layout for mobile, tablet, and desktop
-- Featured post section and blog listing
-- Detailed About page with profile and skills
-- Contact form with validation
+- Featured post and blog listing
+- Individual post detail pages
+- Contact form with validation and success state
+- Smooth page transitions using Framer Motion
+- Component-level animations
+- Skeleton loading UI
+- Lazy-loaded pages with React Suspense
 - Custom 404 Not Found page
-- Reusable and modular React components
+- Reusable empty-state component
+- SEO metadata using React Helmet
 - Clean editorial-inspired UI
-- Built with Tailwind CSS
 
 ---
 
@@ -34,49 +38,54 @@ The application demonstrates client-side routing, reusable React components, dyn
 - Tailwind CSS
 - Vite
 - JavaScript (ES6+)
+- Framer Motion
+- React Helmet Async
 
 ---
 
-## Folder Structure
+## Project Structure
 
-```text
-fieldnotes/
-│
+```
+react-router-blog-app-coregen/
 ├── public/
-│
 ├── src/
 │   ├── assets/
+│   │   ├── logo.png
+│   │   └── Rajan.png
 │   ├── components/
+│   │   ├── AnimatedRoutes.jsx
+│   │   ├── EmptyState.jsx
+│   │   ├── FeaturedPost.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Navbar.jsx
-│   │   ├── FeaturedPost.jsx
-│   │   └── PostListItem.jsx
-│   │
+│   │   ├── PageTransition.jsx
+│   │   ├── PostListItem.jsx
+│   │   ├── PostSkeleton.jsx
+│   │   └── SEO.jsx
 │   ├── data/
 │   │   └── posts.js
-│   │
 │   ├── pages/
-│   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
-│   │   ├── PostDetail.jsx
-│   │   └── NotFound.jsx
-│   │
+│   │   ├── Home.jsx
+│   │   ├── NotFound.jsx
+│   │   └── PostDetail.jsx
 │   ├── utils/
 │   │   └── date.js
-│   │
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
-│
+├── .gitignore
+├── eslint.config.js
 ├── index.html
 ├── package.json
+├── package-lock.json
+├── postcss.config.js
 ├── tailwind.config.js
+├── vercel.json
 ├── vite.config.js
 └── README.md
 ```
-
----
 
 ## Installation
 
@@ -122,13 +131,14 @@ npm run preview
 
 Through this project, I gained practical experience with:
 
-- React Router and client-side routing
-- Dynamic routing using URL parameters
-- Reusable React components
-- Component-based project architecture
+- React Router and dynamic routing
+- Reusable and modular React components
 - Responsive UI development with Tailwind CSS
-- State management using React Hooks
-- Building clean and maintainable frontend applications
+- React Hooks and state management
+- Framer Motion animations
+- Skeleton loading and Suspense
+- SEO metadata implementation
+- Building maintainable frontend applications
 
 ---
 
@@ -138,7 +148,6 @@ Through this project, I gained practical experience with:
 - Blog categories and tags
 - Dark mode
 - Markdown support
-- Backend integration
 - Content Management System (CMS)
 
 ---
