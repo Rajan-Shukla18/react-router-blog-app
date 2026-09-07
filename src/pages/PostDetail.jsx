@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import posts from "../data/posts";
@@ -49,73 +50,80 @@ const PostDetail = () => {
     }
   }, [post]);
 
-  if (!post) return <NotFound context="post" />;
+  if (!post) {
+    return <NotFound context="post" />;
+  }
 
   return (
-    <div className="mx-auto max-w-[680px] px-6 py-10">
+    <>
+      <SEO
+        title={`${post.title} — Fieldnotes`}
+        description={post.excerpt || "A Fieldnotes article."}
+      />
 
-      <Link
-        to="/"
-        className="mb-6 inline-flex items-center gap-2 text-sm text-muted no-underline transition-colors hover:text-accent"
-      >
-        ← Back to all notes
-      </Link>
-
-      <span className="mt-6 block text-xs font-bold uppercase tracking-[0.06em] text-blue-600">
-        {post.category}
-      </span>
-
-      <h1 className="mt-3 mb-6 font-serif text-3xl font-semibold leading-tight text-text md:text-4xl">
-        {post.title}
-      </h1>
-
-      <div className="mb-8 flex items-center gap-3 border-b border-border pb-6">
-        <img
-          src={post.authorAvatar}
-          alt={post.author}
-          className="h-10 w-10 rounded-full object-cover"
-        />
-
-        <div className="flex flex-col">
-          <span className="text-sm font-medium text-text">
-            {post.author}
-          </span>
-
-          <span className="text-xs text-muted">
-            {formatDate(post.date, {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}{" "}
-            · {post.readTime}
-          </span>
-        </div>
-      </div>
-
-      {post.image && (
-        <div className="mb-10 overflow-hidden rounded-xl bg-surface">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="aspect-video w-full object-cover"
-          />
-        </div>
-      )}
-
-      <div className="space-y-6">
-        {post.body.map(renderBlock)}
-      </div>
-
-      <div className="mt-14 border-t border-border pt-8">
+      <div className="mx-auto max-w-[680px] px-6 py-10">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm text-muted no-underline transition-colors hover:text-accent"
+          className="mb-6 inline-flex items-center gap-2 text-sm text-muted no-underline transition-colors hover:text-accent"
         >
           ← Back to all notes
         </Link>
-      </div>
 
-    </div>
+        <span className="mt-6 block text-xs font-bold uppercase tracking-[0.06em] text-blue-600">
+          {post.category}
+        </span>
+
+        <h1 className="mt-3 mb-6 font-serif text-3xl font-semibold leading-tight text-text md:text-4xl">
+          {post.title}
+        </h1>
+
+        <div className="mb-8 flex items-center gap-3 border-b border-border pb-6">
+          <img
+            src={post.authorAvatar}
+            alt={post.author}
+            className="h-10 w-10 rounded-full object-cover"
+          />
+
+          <div className="flex flex-col">
+            <span className="text-sm font-medium text-text">
+              {post.author}
+            </span>
+
+            <span className="text-xs text-muted">
+              {formatDate(post.date, {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}{" "}
+              · {post.readTime}
+            </span>
+          </div>
+        </div>
+
+        {post.image && (
+          <div className="mb-10 overflow-hidden rounded-xl bg-surface">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="aspect-video w-full object-cover"
+            />
+          </div>
+        )}
+
+        <div className="space-y-6">
+          {post.body.map(renderBlock)}
+        </div>
+
+        <div className="mt-14 border-t border-border pt-8">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-muted no-underline transition-colors hover:text-accent"
+          >
+            ← Back to all notes
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 

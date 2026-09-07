@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import SEO from "../components/SEO";
 import rajanPhoto from "../assets/Rajan.png";
 
 const skills = ["React", "JavaScript", "React Router", "HTML & CSS", "Tailwind CSS", "Git", "Node.js", "Supabase", "Vercel"];
@@ -16,9 +16,15 @@ const infoItems = [
 ];
 
 const About = () => {
-  useEffect(() => { document.title = "About — Fieldnotes"; }, []);
 
   return (
+    <>
+      <SEO
+      title="About — Fieldnotes"
+      description="Learn more about Rajan Shukla, a frontend developer and engineering student."
+    />
+
+    
     <div className="min-h-screen -mx-2 md:-mx-8 -mt-4 md:-mt-10 px-2 md:px-8 pt-4 md:pt-10 bg-gradient-to-br from-[#F5FAFF] via-[#EBF3FC] to-[#E3EFFB]">
       <div className="mx-auto max-w-[1160px] px-6 py-10">
       <header className="mb-6">
@@ -194,8 +200,8 @@ const About = () => {
       </div>
     </div>
     </div>
+    </>
   );
 };
 
 export default About;
-
