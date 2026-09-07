@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import EmptyState from "../components/EmptyState";
 import FeaturedPost from "../components/FeaturedPost";
 import PostListItem from "../components/PostListItem";
 import posts from "../data/posts";
@@ -36,15 +37,24 @@ const Home = () => {
         </ul>
       </header>
 
-      {featuredPost && <FeaturedPost post={featuredPost} />}
+      {posts.length === 0 ? (
+      <EmptyState
+        title="No posts available"
+        message="There are no published notes at the moment."
+      />
+    ) : (
+      <>
+        {featuredPost && <FeaturedPost post={featuredPost} />}
 
-      {remainingPosts.length > 0 && (
-        <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {remainingPosts.map((post) => (
-            <PostListItem key={post.id} post={post} />
-          ))}
-        </ul>
-      )}
+        {remainingPosts.length > 0 && (
+          <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {remainingPosts.map((post) => (
+              <PostListItem key={post.id} post={post} />
+            ))}
+          </ul>
+        )}
+      </>
+    )}
     </div>
   );
 };
