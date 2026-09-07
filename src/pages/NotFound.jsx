@@ -1,37 +1,28 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const NotFound = ({ context }) => {
-  useEffect(() => {
-    document.title = "Not found — Fieldnotes";
-  }, []);
-
-  const isPost = context === "post";
-
-  return (
-    <div className="mx-auto flex max-w-3xl flex-col items-center px-6 py-24 text-center">
-      <div className="mb-4 font-serif text-7xl font-semibold text-accent">
+const NotFound = () => (
+  <div className="flex min-h-[65vh] items-center justify-center px-6">
+    <div className="max-w-lg text-center">
+      <span className="mb-3 inline-block text-sm font-bold uppercase tracking-[0.12em] text-accent">
         404
-      </div>
+      </span>
 
-      <h1 className="mb-4 font-serif text-4xl font-semibold text-text">
-        {isPost ? "That note doesn't exist" : "Page not found"}
+      <h1 className="font-serif text-4xl font-semibold text-text sm:text-5xl">
+        Page not found
       </h1>
 
-      <p className="mb-8 max-w-xl text-base leading-7 text-muted">
-        {isPost
-          ? "The post you're looking for isn't here — it may have been moved or the link is incorrect."
-          : "The page you're looking for doesn't exist or may have been moved."}
+      <p className="mx-auto mt-5 max-w-md leading-7 text-muted">
+        The page you're looking for doesn't exist or may have been moved.
       </p>
 
       <Link
         to="/"
-        className="rounded-md bg-text px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-black"
+        className="mt-8 inline-flex rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
       >
-        Back to Home
+        ← Back to home
       </Link>
     </div>
-  );
-};
+  </div>
+);
 
 export default NotFound;
