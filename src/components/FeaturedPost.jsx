@@ -7,7 +7,7 @@ const FeaturedPost = ({ post }) => (
     initial={{ opacity: 0, y: 18 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.2 }}
-    transition={{ duration: 0.45, ease: "easeOut" }}
+    transition={{ duration: 0.60, ease: "easeOut" }}
     whileHover={{ y: -2 }}
   >
     <Link
